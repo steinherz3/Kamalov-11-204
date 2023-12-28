@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Registration Form and polindrom check</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body background="image.jpg">
+        <script src="functions.js"></script>
+        <h1 class="headlineFirst" >Registration Form</h1>
+        <table id="accountData" class="table">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Russian Phone Number</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+
+        <form id="inputForm" class="form-style">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Enter your Name" required><br>
+          
+            <label for="email">Email:</label>
+            <input type="text" id="email" placeholder="Enter Email" required><br>
+          
+            <label for="phone">Russian Phone number:</label>
+            <input type="text" id="phone" placeholder="Enter your Phone Number" required><br>
+          
+            <button onclick="addAccount(
+                document.getElementById('name').value,
+                document.getElementById('email').value,
+                document.getElementById('phone').value,
+            )"> Add</button>
+          </form>
+
+          <h1 class="headlineSecond" >Polindrom Check</h1>
+
+          <form id="palindromeForm" class="form-style">
+            <label for="palindromeText">Input text:</label>
+            <input type="text" id="palindromeText">
+            <input type="button" value="Check" onclick="checkPalindrome(
+                document.getElementById('palindromeText').value
+                )">
+          </form>
+          <p class="headlineFirst" id="palindromeResult"></p>
+    </body>
+</html>
